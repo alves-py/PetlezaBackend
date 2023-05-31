@@ -1,9 +1,17 @@
 package com.example.petlezaBack.form;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Table(name = "forms")
 @Entity(name = "forms")
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = "id")
 public class Form {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -11,7 +19,7 @@ public class Form {
     private String image;
     private Integer age;
     private String species;
-    private String Race;
+    private String race;
     private String gender;
     private String cadastred;
     private Float weight;

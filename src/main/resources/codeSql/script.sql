@@ -6,7 +6,7 @@ CREATE TABLE forms (
     image VARCHAR(255),
     age INT,
     species VARCHAR(255),
-    Race VARCHAR(255),
+    race VARCHAR(255),
     gender VARCHAR(255),
     cadastred VARCHAR(255),
     weight FLOAT,
