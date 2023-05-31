@@ -5,9 +5,8 @@ import jakarta.persistence.*;
 @Table(name = "forms")
 @Entity(name = "forms")
 public class Form {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idForm;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String name;
     private String image;
     private Integer age;
