@@ -17,12 +17,15 @@ public class PetlezaController {
 
     @Autowired
     private FormRepository repository;
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
     public void saveForm(@RequestBody FormRequestDTO data){
         Form formData = new  Form(data);
         repository.save(formData);
         return;
     }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping
     public List<FormResponseDTO> getAll(){
 
