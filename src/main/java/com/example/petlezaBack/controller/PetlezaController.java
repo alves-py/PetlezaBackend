@@ -4,10 +4,9 @@ import com.example.petlezaBack.form.Form;
 import java.util.stream.Collectors;
 import com.example.petlezaBack.form.FormRepository;
 import com.example.petlezaBack.form.FormResponseDTO;
+import com.example.petlezaBack.form.FormRequestDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -18,6 +17,12 @@ public class PetlezaController {
 
     @Autowired
     private FormRepository repository;
+    @PostMapping
+    public void saveForm(@RequestBody FormRequestDTO data){
+        Form formData = new  Form(data);
+        repository.save(formData);
+        return;
+    }
     @GetMapping
     public List<FormResponseDTO> getAll(){
 

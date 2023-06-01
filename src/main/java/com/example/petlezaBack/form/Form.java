@@ -38,4 +38,28 @@ public class Form {
     private String tutor_phone;
     private String last_consultation;
 
+    public Form(FormRequestDTO data) {
+            this.name = data.name();
+            this.image = data.image();
+            this.age = data.age();
+            this.species = data.species();
+            this.race = data.race();
+            this.gender = data.gender();
+            this.cadastred = data.cadastred();
+            this.weight = data.weight();
+            this.personality = data.personality();
+            this.habits_food = data.habits_food();
+            this.habits_hygiene = data.habits_hygiene();
+            this.special_needs = data.special_needs();
+            this.pet_activities = data.pet_activities();
+            this.specific_behavior = data.specific_behavior();
+            this.social_interactions = data.social_interactions();
+            this.current_medications = data.current_medications();
+            this.allergy = data.allergy();
+            this.illnesses = data.illnesses();
+            this.surgeries = data.surgeries();
+            this.tutor_name = data.tutor_name();
+            this.tutor_phone = data.tutor_phone();
+            this.last_consultation = data.last_consultation();
+    }
 }
